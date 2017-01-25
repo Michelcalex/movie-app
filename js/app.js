@@ -27,19 +27,11 @@ app.controller('ListMovieController', function ($scope, MovieService) {
         $scope.movies.splice(id, 1);
     };
 
-    $scope.ratingBtn = function (thought) {
+    $scope.ratingBtn = function (thought, target) {
         console.log('You are clicking on rating');
-        let badBtn = document.querySelector('#bad');
-        let goodBtn = document.querySelector('#good');
-        if (thought === 'good') {
-            console.log('good');
-            badBtn.classList.add('clicked');
-
-        } else if (thought === 'bad') {
-            goodBtn.classList.add('clicked');
-            
-        }
-    }
+        
+        target.rating = thought;
+    }   
 });
 
 
@@ -53,7 +45,8 @@ app.factory('MovieService', function() {
             let movie = {
                 name,
                 date,
-                genre
+                genre, 
+                rating: null,
             };
             movies.push(movie);
         },

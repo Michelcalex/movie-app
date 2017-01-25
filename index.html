@@ -25,8 +25,8 @@
                     {{ oneMovie.name }}
                     {{ oneMovie.date }}
                     {{ oneMovie.genre }}
-                    <button ng-click="ratingBtn('good')" id="good"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
-                    <button ng-click="ratingBtn('bad')" id="bad"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
+                    <button class="good-btn" ng-click="ratingBtn('good', oneMovie)" ng-class="oneMovie.rating"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+                    <button class="bad-btn" ng-click="ratingBtn('bad', oneMovie)" ng-class="oneMovie.rating"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
                     <button ng-click="remove($index)"><i class="fa fa-trash" aria-hidden="true"></i></button>
                 </li>   
             </ul>
