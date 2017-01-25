@@ -14,18 +14,18 @@
     <main>
         <section ng-controller="AddMovieController">
             <input type="text" ng-model="name" placeholder="Name of movie">
-            <input type="text" ng-model="release-date" placeholder="Release date of movie">
+            <input type="text" ng-model="releaseDate" placeholder="Release date of movie">
             <input type="text" ng-model="genre" placeholder="Genre of Movie">
             <button ng-click="addMovie()">Add Movie</button>
         </section>
-        <section ng-controller="ListMovieController">
+        <!--<section ng-controller="ListMovieController">
             <h2>List of Movies</h2>
             <ul>
                 <li ng-repeat = "oneMovie in movies"> {{ oneMovie }}</li>
-                <button>Good</button>
-                <button>Bad</button>
+                <button ng-click="ratingBtn('good')">Good</button>
+                <button ng-click="ratingBtn('bad')">Bad</button>
             </ul>
-        </section>
+        </section>-->
     </main>
     
 
