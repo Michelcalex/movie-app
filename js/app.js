@@ -16,7 +16,17 @@ app.controller('AddMovieController', function ($scope, MovieService) {
         $scope.genre = '';
     }
 
-    console.log(MovieService.getMovies());
+   // console.log(MovieService.getMovies());
+});
+
+
+app.controller('ListMovieController', function ($scope, MovieService) {
+    $scope.movies = MovieService.getMovies();
+
+    console.log($scope.movies);
+    $scope.remove = function(id) {
+        $scope.movies.splice(id, 1);
+    };
 });
 
 
@@ -27,7 +37,12 @@ app.factory('MovieService', function() {
 
     return {
         addMovie: function(name, date, genre) {
-            movies.push(name, date, genre);
+            let movie = {
+                name,
+                date,
+                genre
+            };
+            movies.push(movie);
         },
 
         getMovies: function() {
