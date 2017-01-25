@@ -11,7 +11,7 @@ app.controller('AddMovieController', function ($scope, MovieService) {
     $scope.movies = MovieService.getMovies();
 
     $scope.addMovie = function () {
-        MovieService.addMovie($scope.name, $scope.releaseDate, $scope.genre)
+        const eachMovie = MovieService.addMovie($scope.name, $scope.releaseDate, $scope.genre)
         $scope.name = '';
         $scope.releaseDate = '';
         $scope.genre = '';
@@ -24,10 +24,23 @@ app.controller('AddMovieController', function ($scope, MovieService) {
 app.controller('ListMovieController', function ($scope, MovieService) {
     $scope.movies = MovieService.getMovies();
 
-    console.log($scope.movies);
     $scope.remove = function(id) {
         $scope.movies.splice(id, 1);
     };
+
+    $scope.ratingBtn = function (thought) {
+        console.log('You are clicking on rating');
+        let badBtn = document.querySelector('#bad');
+        let goodBtn = document.querySelector('#good');
+        if (thought === 'good') {
+            console.log('good');
+            badBtn.classList.add('clicked');
+
+        } else if (thought === 'bad') {
+            goodBtn.classList.add('clicked');
+            
+        }
+    }
 });
 
 
