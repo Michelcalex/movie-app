@@ -8,9 +8,26 @@
 </head>
 
 <body ng-app="MovieApp">
+    <header>
+        <h1>Movie App</h1>
+    </header>
+    <main>
+        <section ng-controller="AddMovieController">
+            <input type="text" ng-model="name" placeholder="Name of movie">
+            <input type="text" ng-model="release-date" placeholder="Release date of movie">
+            <input type="text" ng-model="genre" placeholder="Genre of Movie">
+            <button ng-click="addMovie()">Add Movie</button>
+        </section>
+        <section ng-controller="ListMovieController">
+            <h2>List of Movies</h2>
+            <ul>
+                <li ng-repeat = "oneMovie in movies"> {{ oneMovie }}</li>
+                <button>Good</button>
+                <button>Bad</button>
+            </ul>
+        </section>
+    </main>
     
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
     <script src="app.js"></script>
