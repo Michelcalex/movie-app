@@ -25,9 +25,9 @@
                     {{ oneMovie.name }}
                     {{ oneMovie.date }}
                     {{ oneMovie.genre }}
-                    <button ng-click="ratingBtn('good')">Good</button>
-                    <button ng-click="ratingBtn('bad')">Bad</button>
-                    <button ng-click="remove($index)">Remove</button>
+                    <button ng-click="ratingBtn('good')" id="good"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+                    <button ng-click="ratingBtn('bad')" id="bad"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
+                    <button ng-click="remove($index)"><i class="fa fa-trash" aria-hidden="true"></i></button>
                 </li>   
             </ul>
         </section>
@@ -35,6 +35,7 @@
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://use.fontawesome.com/7fb1b7bdac.js"></script>
     <script src="app.js"></script>
 </body>
 

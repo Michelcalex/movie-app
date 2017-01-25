@@ -12,3 +12,7 @@ body {
 button {
     @include button;
 }
+
+.clicked {
+    background-color: grey;
+}

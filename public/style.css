@@ -1276,3 +1276,6 @@ button {
   button:hover, button:focus {
     background-color: #14679e;
     color: #fefefe; }
+
+.clicked {
+  background-color: grey; }
