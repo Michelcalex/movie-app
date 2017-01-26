@@ -4,22 +4,27 @@
 
 <head>
     <title>Movie App</title>
+     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+    <link rel="icon" type="image/png" href="../assets/favicon-film.ico">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body ng-app="MovieApp">
     <header>
-        <h1>Movie App</h1>
+        <h1>Ready, Set, Action!</h1>
     </header>
     <main>
-        <section ng-controller="AddMovieController">
-            <input type="text" ng-model="name" placeholder="Name of movie">
-            <input type="text" ng-model="releaseDate" placeholder="Release date of movie">
-            <input type="text" ng-model="genre" placeholder="Genre of Movie">
+        <section ng-controller="AddMovieController" id="add-movie-container">
+            <div>
+                <input type="text" ng-model="name" placeholder="Name of movie">
+                <input type="text" ng-model="releaseDate" placeholder="Release date of movie">
+                <input type="text" ng-model="genre" placeholder="Genre of Movie">
+            </div>
             <button ng-click="addMovie()">Add Movie</button>
         </section>
-        <section ng-controller="ListMovieController">
-            <h2>List of Movies</h2>
+        <section ng-controller="ListMovieController" id="list-movie-container">
+            <h2>Available Movies</h2>
             <ul>
                 <li ng-repeat = "oneMovie in movies track by $index"> 
                     {{ oneMovie.name }}

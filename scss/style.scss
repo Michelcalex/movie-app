@@ -5,9 +5,53 @@
 @include foundation-global-styles;
 @include foundation-grid;
 
+
+$header-bkgd-color: #80B192;
+$primary-bkgd-color: #6A8D92;
+
+$btn-primary-color: #4B4E6D;
+$btn-good-color: #A1E887;
+$btn-bad-color: #493548;
+
 body {
-    background-color: teal;
+
+    header {
+        @include grid-row();
+        background-color: $header-bkgd-color;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #add-movie-container {
+        @include grid-row();
+        text-align: center;
+        padding: 3% 3% 1%;
+        
+        div {
+            display: flex;
+            justify-content: center;
+
+            input {
+                margin: 2%;
+            }
+        }
+    }
+
+    #list-movie-container {
+        @include grid-row();
+        //max-width: 100%;
+        background-color: $primary-bkgd-color;
+        text-align: center;
+    }
+
 }
+
+
+
+
+
+
+
 
 button {
     @include button;
@@ -24,3 +68,4 @@ button {
 .bad-btn.bad {
     background-color: red;
 }
+
