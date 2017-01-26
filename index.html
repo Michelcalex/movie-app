@@ -4,8 +4,9 @@
 
 <head>
     <title>Movie App</title>
-     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
     <link rel="icon" type="image/png" href="../assets/favicon-film.ico">
+    <link href="https://fonts.googleapis.com/css?family=Economica|Fascinate" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
 </head>
@@ -26,13 +27,15 @@
         <section ng-controller="ListMovieController" id="list-movie-container">
             <h2>Available Movies</h2>
             <ul>
-                <li ng-repeat = "oneMovie in movies track by $index"> 
-                    {{ oneMovie.name }}
-                    {{ oneMovie.date }}
-                    {{ oneMovie.genre }}
-                    <button class="good-btn" ng-click="ratingBtn('good', oneMovie)" ng-class="oneMovie.rating"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
-                    <button class="bad-btn" ng-click="ratingBtn('bad', oneMovie)" ng-class="oneMovie.rating"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
-                    <button ng-click="remove($index)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                <li ng-repeat = "oneMovie in movies track by $index" ng-cloak> 
+                    <span>{{ oneMovie.name }}</span>
+                    <span>{{ oneMovie.date }}</span>
+                    <span>{{ oneMovie.genre }}</span>
+                    <div>
+                        <button class="good-btn" ng-click="ratingBtn('good', oneMovie)" ng-class="oneMovie.rating"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+                        <button class="bad-btn" ng-click="ratingBtn('bad', oneMovie)" ng-class="oneMovie.rating"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
+                        <button ng-click="remove($index)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </div>
                 </li>   
             </ul>
         </section>

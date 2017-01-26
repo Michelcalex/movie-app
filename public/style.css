@@ -1253,47 +1253,8 @@ button {
       .column-block > :last-child {
         margin-bottom: 0; } }
 
-body header {
-  max-width: 75rem;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: #80B192;
-  max-width: 100%;
-  text-align: center; }
-  body header::before, body header::after {
-    display: table;
-    content: ' '; }
-  body header::after {
-    clear: both; }
-
-body #add-movie-container {
-  max-width: 75rem;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  padding: 3% 3% 1%; }
-  body #add-movie-container::before, body #add-movie-container::after {
-    display: table;
-    content: ' '; }
-  body #add-movie-container::after {
-    clear: both; }
-  body #add-movie-container div {
-    display: flex;
-    justify-content: center; }
-    body #add-movie-container div input {
-      margin: 2%; }
-
-body #list-movie-container {
-  max-width: 75rem;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: #6A8D92;
-  text-align: center; }
-  body #list-movie-container::before, body #list-movie-container::after {
-    display: table;
-    content: ' '; }
-  body #list-movie-container::after {
-    clear: both; }
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
 
 button {
   display: inline-block;
@@ -1309,18 +1270,93 @@ button {
   text-align: center;
   cursor: pointer;
   background-color: #1779ba;
-  color: #fefefe; }
+  color: #fefefe;
+  border-radius: 5px;
+  background-color: #c3d1d3;
+  font-family: "Economica", sans-serif;
+  font-size: 1em; }
   [data-whatinput='mouse'] button {
     outline: 0; }
   button:hover, button:focus {
     background-color: #14679e;
     color: #fefefe; }
 
-.clicked {
-  background-color: grey; }
-
-.good-btn.good {
-  background-color: green; }
-
-.bad-btn.bad {
-  background-color: red; }
+body {
+  font-family: "Economica", sans-serif; }
+  body header {
+    max-width: 75rem;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #80B192;
+    max-width: 100%;
+    text-align: center; }
+    body header::before, body header::after {
+      display: table;
+      content: ' '; }
+    body header::after {
+      clear: both; }
+    body header h1 {
+      font-family: "Fascinate", cursive;
+      color: #493548;
+      text-transform: uppercase; }
+  body #add-movie-container {
+    max-width: 75rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding: 3% 3% 1%; }
+    body #add-movie-container::before, body #add-movie-container::after {
+      display: table;
+      content: ' '; }
+    body #add-movie-container::after {
+      clear: both; }
+    body #add-movie-container div {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      body #add-movie-container div input {
+        margin: 2%; }
+  body #list-movie-container {
+    max-width: 75rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+    background-color: #6A8D92;
+    text-align: center; }
+    body #list-movie-container::before, body #list-movie-container::after {
+      display: table;
+      content: ' '; }
+    body #list-movie-container::after {
+      clear: both; }
+    body #list-movie-container h2 {
+      font-size: 2em; }
+    body #list-movie-container ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0; }
+      body #list-movie-container ul li {
+        background-color: #fff;
+        width: 25%;
+        margin: 2%;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px; }
+        body #list-movie-container ul li span {
+          display: flex;
+          flex-direction: column; }
+          body #list-movie-container ul li span:nth-child(1) {
+            font-weight: bold;
+            font-size: 1.1em; }
+          body #list-movie-container ul li span:nth-child(2) {
+            font-style: italic; }
+        body #list-movie-container ul li div button {
+          margin: 0;
+          margin-top: 15px; }
+        body #list-movie-container ul li div .good-btn.good {
+          background-color: #ccdfd3; }
+        body #list-movie-container ul li div .bad-btn.bad {
+          background-color: #493548; }
